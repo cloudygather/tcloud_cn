@@ -1,0 +1,333 @@
+<!DOCTYPE html> 
+<html lang="en">   
+ <head>     
+  <meta charset="utf-8">     
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">     
+  <meta name="viewport" content="width=device-width, initial-scale=1">     
+  <title>AiBI線上結帳</title>     
+  <link href="css/bootstrap.min.css" rel="stylesheet">     
+  <!--[if lt IE 9]>       
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>       
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>     
+  <![endif]-->   
+
+
+<style>
+
+form .error label {
+  color: #e66;
+}
+form .error input {
+  background-color: #fee;
+  border-color: #e99;
+}
+
+/* radio */
+input [type="radio"] { display:none; }
+#radio input[type="radio"] {
+  display: none; 
+} 
+#radio input:checked + .button {
+  font-weight: 400;
+  color:#4a4a4a;
+  background: white; 
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2554A3; 
+  cursor: default; 
+} 
+#radio .button {
+  display: inline-block; 
+  margin: 0 5px 5px 0; 
+  padding: 10px 10px; 
+  font-weight: 400;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f5f5f5; 
+  background: #f5f5f5; 
+  color: #333; 
+  cursor: pointer; 
+} 
+#radio .button:hover {
+  background: #bbb; color: #fff; 
+} 
+#radio .round {
+  border-radius: 6px; 
+}
+
+
+/* Modal*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width:300px;
+  height:240px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- 引入bootstrap -->
+<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+ </head>   
+
+
+ <body style="background-color: #f5f5f5;font-family: sans-serif;font-weight: 200;height:80px;">    
+  
+  <nav class="navbar navbar-default" style="position: fixed;width: 100%;z-index: 10;background-color:#2554A3 ;border-radius: 0;border: 0;">
+
+    <ui>
+      <a class="navbar-brand" href="list-1.html"><img src="img/logo_LOGO_pay.svg" style="position:absolute;width: 176px;top:8px;"></a>
+    </ui>
+
+    <ul class="nav" style="position:absolute;right:20px;top:8px">
+      <a class="btn btn-primary" href="index.html" role="button" style="background-color: #2554A3;border: none;">返回首頁</a>
+    </ul>
+</nav>
+
+  
+
+      <div class="container" style="background-color: #ffffff;background-size: auto; margin-top: 0px;padding:40px 50px;width: 90%;">
+
+          <!-- mobile pay square -->
+
+          <div class="visible-xs visible-sm">
+            
+            <div style="margin-top:6vh;padding: 5vw;color:#4a4a4a;background-color: #f5f5f5;border-bottom-left-radius:10px;border-bottom-right-radius:10px;">
+                  
+              <div style="margin-bottom: 10px;">
+              <h6 style="color:#a4a4a4;">訂購方案</h6>
+              <h4 style="line-height:30px;">數位城市生活提案</br>30人/12個月</h4>  
+              </div>
+              <div style="margin:4vw;"></div>
+
+                <h6 style="color:#a4a4a4;">訂購數量</h6>
+                <h4>x 1</h4>  
+                
+
+                <div style="margin:4vw;"></div>
+
+
+                <h6 style="color:#a4a4a4;">應付金額</h6>
+                <h4>NT 50,000 元</h4>  
+
+            </div>
+          </div>
+
+          <div class="row" style="width:;">
+
+
+            
+
+            <form id="validatorForm" name="infoform" action="#" method="post" enctype="text/Plain" >
+
+
+            <div class="col-12 col-md-7">
+
+
+
+                <!--聯絡人資料-->
+                
+                  <div style="color:#2554A3;margin-top: 80px;">
+                    <h4>填寫聯絡人資料</h4>
+                    <hr style="border-color:#2554A3;"></hr>
+                  </div>
+                
+                  <div class="form-group">
+                    <label><h5>聯絡人姓名<span style="color:red;">*</span></h5></label>
+                    <input id="Name" class="form-control" name="Name" type="text" value="王小明" placeholder="請輸入" data-toggle="" title="" style="width:;" isFormValid>
+                  </div>
+                            
+                  <div class="form-group">
+                    <label><h5>聯絡電話<span style="color:red;">*</span></h5></label>
+                    <input id="telphone" class="form-control" name="Telno" type="telno" value="0911000111" placeholder="請輸入" data-toggle="" title="" isFormValid>
+                  </div>
+                            
+                  <div class="form-group position">
+                    <label><h5>聯絡信箱<span style="color:red;">*</span></h5></label>
+                    <input id="email" class="form-control" name="Email" type="email" value="wang@gmail.com" placeholder="請輸入" data-toggle="tooltip" title="請輸入正確格式 xxx@xxx.xxx" isFormValid>
+                  </div>
+
+                <!--發票資料-->
+
+                <div style="color:#2554A3;margin-top: 30px;">
+                  <h4>填寫發票資料</h4>
+                  <hr style="border-color:#2554A3;"></hr>
+                </div>
+  
+
+                <div class="form-group">
+                  <label><h5>公司抬頭<span style="color:red;">*</span></h5></label>
+                  <input id="Name" class="form-control" name="Corporate" type="text" value="王小明有限公司" placeholder="請輸入" style="width:;" data-toggle="" title="" isFormValid>
+                </div>
+          
+                <div class="form-group">
+                  <label><h5>統一編號<span style="color:red;">*</span></h5></label>
+                  <input id="no" class="form-control" name="TaxID" type="no" maxlength="8" minlength="8" value="55550000" placeholder="請輸入" data-toggle="tooltip" title="請輸入8碼數字" isFormValid>
+
+                </div>
+          
+                <div class="form-group position">
+                  <label><h5>公司地址<span style="color:red;">*</span></h5></label>
+                  <input id="add" class="form-control" name="Address" type="add" value="台中市北七路120號" placeholder="請輸入" data-toggle="" title="" isFormValid>
+
+                </div>
+
+                <!--支付方式-->
+                <div style="color:#2554A3;margin-top: 30px;">
+                  <h4>選擇付款方式</h4>
+                  <hr style="border-color:#2554A3;"></hr>
+                </div>
+
+                <div class="mb-4">
+
+                  <div id="radio" style="margin-bottom: 8vh;"> 
+                    
+                    <label>
+                      <input type="radio" name="label" value="card" checked="checked">
+                      <span class="round button">信用卡</span><span style="font-size: 12px;font-weight: 400;color:#4a4a4a;">線上信用卡支付，一次付清帳目</span>
+                    </label> 
+
+                    <p></p>
+
+                    <label>
+                      <input type="radio" name="label" value="atm">
+                      <span class="round button">銀行ATM轉帳</span><span style="font-size: 12px;font-weight: 400;color:#4a4a4a;">提供王道銀行虛擬帳號，需於24小時內轉帳完成</span>
+                    </label> 
+
+                  </div>
+
+                </div>
+
+
+              <!--form end-->
+              
+
+
+            </div>
+
+<!-- gopay -->
+
+            <div class="col-8 col-md-4 hidden-xs hidden-sm">
+
+               <div style="margin:0 30px;margin-top: 80px;">
+               <div style="background-color: #2554A3;position: fixed;border-top-left-radius:10px;border-radius:10px;">
+                <div style="padding:10px 30px;color:white;background-color: #2554A3; border-radius: 4px;width: 20em;">
+                  <h4>選擇方案</h4>  
+                </div>
+
+                <div style="padding: 30px;color:#4a4a4a;background-color: #f5f5f5;border-bottom-left-radius:10px;border-bottom-right-radius:10px;">
+                  
+                  <div style="margin-bottom: px;">
+                  <h6 style="color:#a4a4a4;">訂購方案</h6>
+                  <h4 style="line-height:30px;">數位城市生活提案
+                    <p>30人/12個月</p></h4>  
+                  </div>
+
+                  <div style="margin:2vw;"></div>
+
+                    <h6 style="color:#a4a4a4;">訂購數量</h6>
+                    <h4>x 1</h4>  
+
+                  <div style="margin:2vw;"></div>
+
+  
+                    <h6 style="color:#a4a4a4;">應付金額</h6>
+                    <h4>NT 50,000 元</h4>  
+
+                    <div style="margin:2vw;"></div>
+                
+                    <button action="" method="post" type="button" enctype="text/Plain" class="btn btn-primary btn-lg btn-block check_btn" style="background-color: #2554A3;margin-top:30px;" onclick="pay()" id="onSubmit">確定付款</button>
+               
+
+    
+                  </div>
+                </div>
+               </div>
+              </div>
+
+              <button type="button" class="navbar navbar-default navbar-fixed-bottom visible-xs visible-sm check_btn" style="background-color: #2554A3;color:white; width:100%;" onclick="pay()"><h4>確定付款</h4></button>
+
+
+            </form>
+
+            </div>   
+          </div>
+
+
+  
+
+</div>
+
+
+<script>
+// bootstrap tooltip
+$('[data-toggle="tooltip"]').tooltip();
+
+// 表單驗證
+$('form').submit(function(){
+    var isFormValid = true;
+    $(this).find('input').each(function(){
+        var $this = $(this);
+        // 使用 trim 把空白去除
+        if ($.trim($this.val()).length === 0){
+          $this.tooltip('show').closest('div').addClass('error');
+          isFormValid = false;
+        }
+        else{
+          confirm('確認前往付款？')
+        }
+    });
+    return isFormValid;
+});
+
+  </script>
+  
+  <script>
+    function pay() {
+      var answer = confirm("確認前往付款？");
+	    if (answer)
+		location.href="result-1.html";
+    }
+    </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>     
+  <script src="js/bootstrap.min.js"></script>   
+ </body> 
+</html>
