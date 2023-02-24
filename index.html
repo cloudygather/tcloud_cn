@@ -641,55 +641,43 @@ nav{
 </head>
 <body>
 
+<nav style="z-index: 1000;" id="nav_pc">
+  <div class="logo"><img src="img/logo_LOGO.svg" style="width:;display:;margin:0px 0;cursor: pointer;" onclick="location.href='Tcloud_1103_4.html'"></div>
 
-  <div class="parallax_pc bg-animation" id="top_pc">
+   <ul>
+    <input type="button" class="menu" value="計畫內容" onClick="javascript:ScrollTo('plan')">　
+    <input type="button" class="menu" value="銷售方案" onClick="javascript:ScrollTo('product')">　
+    <input type="button" class="menu" value="相關活動" onClick="javascript:ScrollTo('news')">
+    <input type="button" class="menu" value="聯絡我們" onClick="javascript:ScrollTo('contact')">
+   </ul>
+</nav>
 
-    <div class="slogan" id="fadein">
-      <img src="img/logo_LOGO_white.svg" style="width: 280px;">
-    </div>
-  
-    <div class="slogan_sub" id="fadein">
-      政府輔助中小微企業數位轉型</br>
-      企業核心競爭力脫穎而出
-    </div>
-  
-    <div class="menu_pc">
-      <div><a href="#plan" style="text-decoration: none;color:white;">雲市集計畫</a></div>
-      <div><a href="#product" style="text-decoration: none;color:white;">產品方案</a></div>
-      <div><a href="#contact" style="text-decoration: none;color:white;">聯絡我們</a></div>
-    </div>
-  
-  </div>
-  
-  <div class="top_pc">
-    <a href="#top_pc"><img src="img/icon_top.svg" style="position:fixed;right:5vw;bottom: 5vh;z-index: 1000;"></a>
-  </div>  
-  
-  
-  <div class="parallax_mobile">
-  
-    <div class="slogan" id="top_mobile">
-      <img src="img/logo_LOGO_white.svg" style="width: 320px;" id="fadein">
-    </div>
-  
-    <div class="slogan_sub" id="fadein">
-      政府輔助中小微企業數位轉型</br>
-      企業核心競爭力脫穎而出
-    </div>
-  
-    <div style="margin:6vh 0;">
-    <div class="menu_mobile"><a href="#plan" style="text-decoration: none;color:white;";>雲市集計畫</a></div>
-    <div class="menu_mobile"><a href="#product" style="text-decoration: none;color:white";>產品方案</a></div>
-    <div class="menu_mobile"><a href="#contact" style="text-decoration: none;color:white";>聯絡我們</a></div>
-    </div>
-  
-  </div>
+<nav style="z-index: 1000;" id="nav_mobile">
+  <div  class="logo_mobile" style="cursor: pointer;" onclick="location.href='Tcloud_1103_4.html'"><img src="img/logo_LOGO.svg"></div>
+  <label for="menu-check" id="menu-toggle"><img src="img/icon_menu.svg" style="padding:;"></label>     
+  <input id="menu-check" type="checkbox">     
+  <ul class="checkmenu">         
+    <li onClick="javascript:ScrollTo('plan')">計畫內容</li>         
+    <li onClick="javascript:ScrollTo('product')">銷售方案</li>         
+    <li onClick="javascript:ScrollTo('news_mobile')">相關活動</li>         
+    <li onClick="javascript:ScrollTo('contact')">聯絡我們</li>         
+  </ul>
+</nav>
 
 
 
 <div>
 
   <div></div>
+
+  <video autoplay muted loop playsinline id="myVideo" width="100%"  class="video_pc">
+    <source src="img/video_3.mp4" type="video/mp4">
+  </video>
+
+  <video autoplay muted loop playsinline id="myVideo" width="100%"  class="video_mobile">
+    <source src="img/video_375.mp4" type="video/mp4">
+  </video>
+
 
 </div>
 

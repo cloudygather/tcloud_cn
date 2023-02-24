@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">     
+<meta name="keywords" content="tcloud,臺灣雲市集,數位學習,企業教育訓練系統,政府補助,數位轉型">
+<meta name="description" content="apeiro@臺灣雲市集">
+<meta property="og:description" content="apeiro@臺灣雲市集，政府輔助中小企業數位轉型，企業核心競爭力脫穎而出">
+<link href="img/favicon.ico" rel="shortcut icon"/>
+<title>apeiro@臺灣雲市集</title>
+<html lang="en">  
+<link rel="stylesheet" type="text/css" href="./slick/slick.css">
+<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+<script type="text/javascript" src="jquery.js"></script>
+
+<style>
+
+body, html {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  font-family:'Noto Sans TC', sans-serif ;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  scroll-behavior: smooth
+}
+
+.slider_pc{
+  font-family:'Noto Sans TC', sans-serif ;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 1000;
+    color:#2554A4;
+}
+
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+h4{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing:1.2;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+  color: transparent;
+}
+
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: right;
+  float: right;
+  margin-right:2vw;
+}
+
+li {
+  text-decoration: none;
+  margin: 0 1.5vw;
+  padding: 10px 0;
+  display: block;
+  color: #4a4a4a;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+li:hover{
+  color: #0066cc;
+}
+
+
+li a {
+  display: block;
+  background-color: ;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  float: left;
+  width: 50%;
+  line-height: 25px;
+  text-size-adjust:100%;
+}
+
+.footer_pc{
+  text-align: center;
+  line-height: 6vh;
+  color:#ffffff;
+  background-color: black;
+}
+
+.footer_mobile{
+  text-align: center;
+  line-height: 6vh;
+  color:#ffffff;
+  background-color: black;
+  font-size: 14px;
+}
+
+.btn1{
+  background-color:#2554A4;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin:10vh 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card{
+  border-color: #888888;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #ffffff;
+  border-radius:6px;
+  width:200px;
+  height:auto;
+  border-width: 1px;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.slider_pc {
+        width: 1024px;
+        margin: 60px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 10px;
+
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #888888;
+      width: 100px;
+    }
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+.menu_mobile{
+  color:#ffffff;
+  border-width:1px;
+  border-color:#ffffff;
+  border-style:solid;
+  width:200px;
+  border-radius: 6px;
+  padding: 20px 0;
+  text-align: center;
+  margin:3.5vh auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.menu{
+  color:#4a4a4a;
+  margin: 6px 10px;
+  font-size: 1.2em;
+  border-style: hide;
+  border:2px white none;
+  background-color: #ffffff;
+}
+
+.menu:hover{
+  color:#0066cc;
+}
+
+a{
+  color:#4a4a4a;
+}
+
+
+a:active{
+  color:#4a4a4a;
+  text-decoration: none;
+}
+
+a:hover{
+  color:#0066cc;
+}
+
+nav{
+  height:72px;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.logo{  
+  margin: 20px 30px;
+  display: inline-flex;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .parallax_mobile{
+    display:none;
+  }
+  .slider_mobile{
+    display:none;
+  }
+  .top_mobile{
+    display:none;
+  }
+  .footer_mobile{
+    display: none;
+  }
+  .product_describe_mobile{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .column {
+    width: 100%;
+  }
+  .parallax_pc{
+    display:none;
+  }
+  .parallax_mobile{
+    display:show;
+  }
+  .slider_pc{
+    display:none;
+  }
+  .slider_mobile{
+    display:show;
+  }
+  .top_pc{
+    display:none;
+  }
+  .footer_pc{
+    display: none;
+  }
+  .product_describe_pc{
+    display: none;
+  }
+
+}
+
+
+</style>
+
+
+<script type="text/javascript" src="jquery.js">
+  $(function () {
+      $(‘a[href*=#]:not([href=#])’).click(function() {
+          var target = $(this.hash);
+          $(‘html,body’).animate({
+              scrollTop: target.offset().top
+          }, 1000);
+          return false;
+      });
+
+  });
+</script>
+
+<script>
+  function ScrollTo(id_name) {
+  $('html,body').animate({
+  scrollTop: $('#'+id_name).offset().top}, 1000);
+  }
+  </script>
+
+</style>
+
+</head>
+<body>
+
+
+<nav style="z-index: 1000;">
+  <div class="logo"><img src="img/" style="width:;display:;margin=30px 0"></div>
+
+   <ul>
+    <input type="button" class="menu" value="計畫內容" onClick="javascript:ScrollTo('plan')">　
+    <input type="button" class="menu" value="銷售方案" onClick="javascript:ScrollTo('product')">　
+    <input type="button" class="menu" value="聯絡我們" onClick="javascript:ScrollTo('contact')">
+   </ul>
+</nav>
+
+
+<div>
+
+  <div></div>
+
+  <video autoplay muted loop playsinline id="myVideo" width="100%"  style="margin-top:52px;">
+    <source src="img/test.mp4" type="video/mp4"><img src="img_logo_white.png" id=logo_320></img>
+  </video>
+
+</div>
+
+
+<div id="plan" class="row" style="width:100%;margin:0px;padding:10vh 4vw;height:auto;background-color:#f5f5f5;font-size:36px">
+    <div class="column" style="">
+        <div style="margin:0vh 5vw 8vh 5vw;text-align:justify">
+        <h1><b>計畫內容</b></h1>
+        <h3 style="color:#4a4a4a;">中小企業數位轉型計畫</h3>
+        <h4>經濟部中小企業處辦理之<b>「臺灣雲市集 Tcloud」</b>匯集各類雲端數位工具，輔導中小微企業選擇合適方案，於2021年7月1日起提供線上申請數位點數，依照辦法可得補助金最高3萬元，以此鼓勵企業數位轉型、舒緩企業升級負擔。</h4>
+        </div>
+    </div>
+    <div class="column" style="">
+        <div style="margin:0vh 5vw 0vh 5vw;text-align:justify;">
+        <h1 style="color:#2554A4;"><b>補助說明</b></h1>
+        <h3 style="color:#4a4a4a;">政府提供80%補助企業採購方案</h3>
+        <h4>每家中小微企業透過線上申請與身份認證，資格驗證通過後即可獲得30,000數位點數 ( 1點=1元 )，而後企業於臺灣雲市集平台選購雲端解決方案時，依自付與補助（ 點數折抵 ）比例1比4原則進行採購，可得補助金最高3萬元。</h4>
+        </div>
+    </div>
+</div>
+
+<div id="product" class="" style="background-color:#ffffff;margin:0 35px;">
+
+  <div class="product_describe_pc" style="text-align:left;background-color:#ffffff;width:100%;height:auto;margin:15vh 5vw;">
+    <div class="column" style="margin-top: 52px;">
+      <div style="padding:2vh 1vw;background-color:#0066CC;color:white;border-radius: 50px;width:240px;margin:6vh 0;"><b>臺灣雲：企業管理 / 人資管理</b></div>
+      <h1 style="color:#0066CC;"><b>產品簡介1</b></h1>
+      <h3 style="color:#0066CC;">儲存空間50G + 每月使用流量100G </br>+ 系統設定服務 + 4小時線上教育訓練</h3>
+      <h4>無紙化教育訓練，上課品質一致，時間地點不受限制，</br>員工培訓成果即時掌握，優異人才脫穎而出，雲端導入快速上線。</h4>
+    </div>
+
+    <div class="column" style="margin-top: 52px;">
+      <img src="img/img_divice.png" style="width:80%;">
+    </div>
+
+    　<div><b></b></div>
+    
+  </div>
+
+  <div class="product_describe_mobile" style="text-align:center;background-color:#ffffff;width:100%;height:auto;margin:0 0px 0 10px;">
+    　<div style="padding:10px 2px;background-color:#0066CC;color:white;border-radius: 20px;width:240px;margin:5vh 0 0;"><b>臺灣雲：企業管理 / 人資管理</b></div>
+      <h1 style="color:#0066CC;text-align: left;font-"><b>數位學習管理平台</b></h1>
+      <h4 style="color:#0066CC;font-weight: 600;text-align: left;">． 儲存空間50G </br>． 每月使用流量100G</br>． 系統設定服務 </br>． 4小時線上教育訓練</h4>
+  </div>
+
+      <section class="regular_pc slider_pc">
+        <div class="card" style="padding:15px 0;font-family:'Noto Sans TC', sans-serif ;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;"><font color="#4a4a4a">使用人數</font></br>
+          <div style="font-size: 28px;font-weight: 400;">10<small>人</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="24" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;"><font color="#4a4a4a">使用期限</font></br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;"><font color="#4a4a4a">優惠售價</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 33,200</s></div></div>
+          <div><font color="#4a4a4a">臺灣雲方案</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 6,640 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103162F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+        
+        <div class="card" style="padding:15px 0;font-family:'Noto Sans TC', sans-serif ;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;"><font color="#4a4a4a">使用人數</font></br>
+          <div style="font-size: 28px;font-weight: 400;">20<small>人</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="24" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;"><font color="#4a4a4a">使用期限</font></br><div style="font-size: 28px;font-weight: 400;">1<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;"><font color="#4a4a4a">優惠售價</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 58,400 </s></div></div>
+          <div><font color="#4a4a4a">臺灣雲方案</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 28,400 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD721031B2F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+        <div class="card" style="padding:15px 0;font-family:'Noto Sans TC', sans-serif ;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;"><font color="#4a4a4a">使用人數</font></br>
+          <div style="font-size: 28px;font-weight: 400;">30<small>人</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="24" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;"><font color="#4a4a4a">使用期限</font></br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;"><font color="#4a4a4a">優惠售價</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 83,600</s></div></div>
+          <div><font color="#4a4a4a">臺灣雲方案</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 53,600 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103072F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+        <div class="card" style="padding:15px 0;font-family:'Noto Sans TC', sans-serif ;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;"><font color="#4a4a4a">使用人數</font></br>
+          <div style="font-size: 28px;font-weight: 400;">40<small>人</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="24" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;"><font color="#4a4a4a">使用期限</font></br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;"><font color="#4a4a4a">優惠售價</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 108,800</s></div></div>
+          <div><font color="#4a4a4a">臺灣雲方案</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 78,800 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103202F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+
+        <div class="card" style="padding:15px 0;font-family:'Noto Sans TC', sans-serif ;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;"><font color="#4a4a4a">使用人數</font></br>
+          <div style="font-size: 28px;font-weight: 400;">50<small>人</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="24" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;"><font color="#4a4a4a">使用期限</font></br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;"><font color="#4a4a4a">優惠售價</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 134,000</s></div></div>
+          <div><font color="#4a4a4a">臺灣雲方案</font></br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 104,000 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103252F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+        <div class="" style="">
+        </div>
+
+
+      </section>
+
+
+      <section class="regular_mobile slider_mobile" >
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用人數</br><div style="font-size: 28px;font-weight: 400;">10<small>人</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 33,200</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 6,640 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103162F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+        
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用人數</br><div style="font-size: 28px;font-weight: 400;">20<small>人</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 58,400</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 28,400 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD721031B2F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用人數</br><div style="font-size: 28px;font-weight: 400;">30<small>人</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 83,600</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 53,600 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103072F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用人數</br><div style="font-size: 28px;font-weight: 400;">40<small>人</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 108,800</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 78,800 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103202F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用人數</br><div style="font-size: 28px;font-weight: 400;">50<small>人</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 134,000</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 104,000 <small>/ 年</small></div></div>
+        
+          <div style="margin:50px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD72103252F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+
+      </section>
+
+    
+
+      <div style="margin:100px auto;width:90%;text-align: center;"><h4>續約優惠：本方案訂閱期程結束後，中小微企業全額自付<font color="#FF0000">續約優惠提供免費一個月訂閱服務</font></h4></div>
+
+     </div>
+
+ </div>
+</div>
+
+
+
+
+<div id="" style="background-color:#f5f5f5;height:auto;margin:0;padding:1vh 35px;">
+
+  <div class="product_describe_pc" style="text-align:left;background-color:#f5f5f5;width:100%;height:auto;margin:15vh 5vw;">
+    <div class="column" style="">
+      <div style="padding:2vh 1vw;background-color:#E78849;color:white;border-radius: 50px;width:100px;margin:6vh 0;"><b>分類選項</b></div>
+      <h1 style="color:#E78849;"><b>使用者中心管理系統</b></h1>
+      <h3 style="color:#E78849;">系統規格1 + 系統規格2 ＋ 系統規格3</br></h3>
+      <h4>系統簡介：系統化功能流程，帳號綁定使用，行銷、</br>管理一鍵達成沒煩惱。</h4>
+    </div>
+    <div class="column" style="">
+      <img src="img/img_divice.png" style="width:80%;">
+    </div>
+
+    　<div><b></b></div>
+  </div>
+
+  <div class="product_describe_mobile" style="text-align:left;background-color:#f5f5f5;width:100%;height:auto;margin:0 0px 0 10px;">
+    　<div style="padding:10px 10px;background-color:#E78849;color:white;border-radius: 20px;width:240px;margin:5vh 0 0;"><b>臺灣雲：客戶服務 / 線上預約</b></div>
+      <h1 style="color:#E78849;"><b>集客機器人-析客版</b></h1>
+      <h4 style="color:#E78849;font-weight: 600;">． 門店帳號多人使用 </br>． LINE@機器人服務</br>． 後台網站管理系統 </br>． 系統設定服務</br>． 4小時線上教育訓練</h4>
+  </div>
+
+
+      <section class="regular_pc slider_pc">
+        <div class="card" style="padding:15px 0;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;">使用門店</br><div style="font-size: 28px;font-weight: 400;">1<small>店</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="30" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;">使用期限</br><div style="font-size: 28px;font-weight: 400;">6<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 23,000</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 4,600 <small>/ 半年</small></div></div>
+        
+          <div style="margin:55px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD721030C2F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+        
+        <div class="card" style="padding:15px 0;">
+          <div style="width:100%;">
+          <div style="float: left;padding:20px 0 0 40px;">使用人數</br><div style="font-size: 28px;font-weight: 400;">1<small>店</small></div></div>
+          <div style="float: left;position:relative;left:15%;margin:30px auto"><hr size="30" width="1"></div>
+          <div style="float: right;padding:20px 40px 0 0;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="80%">
+
+          <div style="margin:30px;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 38,000</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 8,000 <small>/ 年</small></div></div>
+        
+          <div style="margin:55px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD721032A2F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+      </section>
+
+      
+      <section class="regular_mobile slider_mobile" >
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用門店</br><div style="font-size: 28px;font-weight: 400;">1<small>店</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">6<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 23,000</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 4,600 <small>/ 半年</small></div></div>
+        
+          <div style="margin:55px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD721030C2F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+        
+        <div class="card" style="padding:4vh 4vw;">
+          <div style="display: flex;justify-content: center;margin:1vh 2vw 4vh 2vw;">
+          <div style="padding: 0vh auto;">使用人數</br><div style="font-size: 28px;font-weight: 400;">1<small>店</small></div></div>
+          <div style="padding: 1vh 12vw;"><hr size="30" width="1"></div>
+          <div style="padding: 0vh auto;">使用期限</br><div style="font-size: 28px;font-weight: 400;">12<small>個月</small></div></div>
+          </div>
+          <hr size="1" width="95%">
+
+          <div style="margin:5vw;">優惠售價</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small><s> 38,000</s></div></div>
+          <div>臺灣雲方案</br><div style="font-size: 28px;font-weight: 400;"><small>NT</small> 8,000 <small>/ 年</small></div></div>
+        
+          <div style="margin:55px 0;"><btn class="btn1" onclick="location.href='https://www.tcloud.gov.tw/solution/CDCFD721032A2F8EE0531512620A42FD'">購買方案</btn></div>
+        </div>
+
+      </section>
+
+
+
+      <div style="margin:100px auto;width:90%;text-align: center;"><h4>續約優惠：本方案訂閱期程結束後，中小微企業全額自付<font color="#FF0000">續約優惠提供免費一個月訂閱服務</font></h4></div>
+
+</div>
+
+
+<div id="contact" style="text-align:center;background-color:#ffffff;width:100%;height:auto;padding:35px;">
+    <div><h1><b>聯絡我們</b></h1></div>
+    <h3 style="color:#4a4a4a;">針對臺灣雲市集優惠方案，您可以透過填寫表單或是撥打服務專線洽詢，我們將盡快為您服務。</h3>
+    <div style="margin: 8vh;"><btn class="btn1" onclick="location.href='https://www.apeirolms.com/contact'">線上表單</btn></div>
+    <div style="padding: 0 0 3vh 0;color:#4a4a4a;"><h3>服務專線：04-37077558</h3></div>
+</div>
+
+<footer class="footer_pc">
+<div>© 2021 卓健智慧生態股份有限公司 AiBI Techcology Inc.</div>
+</footer>
+
+<footer class="footer_mobile">
+  <div>© 2021 卓健智慧生態股份有限公司 AiBI Techcology Inc.</div>
+</footer>
+  
+
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).on('ready', function() {
+    $(".regular_pc").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    });
+  });
+</script>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).on('ready', function() {
+    $(".regular_mobile").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  });
+</script>
+
+</body>
+</html>
+
