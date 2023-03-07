@@ -80,24 +80,7 @@
     clear: both;
   }
   
-  
-  .menu{
-    color:#4a4a4a;
-    margin: 8px 20px;
-    font-size: 1em;
-    border-style: hide;
-    border:2px white none;
-    background-color: #ffffff;
-    float: right;
-    cursor: pointer;
-  }
-  
-  .menu:hover{
-    color:#2554A4;
-    border-bottom: solid;
-    border-color: #2554A4;
-    border-width: 1px;
-  }
+
     
   li {
     text-decoration: none;
@@ -284,7 +267,7 @@
   .checkmenu{
     width:100%;
     background-color:rgba(255, 255, 255, 0.8);
-    margin: 0px 0 0 0;
+    margin: -2px 0 0 0;
     width:100%;
     padding:20px 0;
     height:auto;
@@ -463,6 +446,24 @@
           background: ;
           animation: fadein 5s ease;
       }
+
+      .menu{
+    text-decoration: none;
+    color:#4a4a4a;
+    margin: 16px 20px;
+    cursor: pointer;
+  }
+    
+  .menu:hover{
+    color:#2554A4;
+    border-bottom: solid;
+    border-color: #2554A4;
+    border-width: 1px;
+  }
+
+  a{
+    text-decoration: none;
+  }
   
   
   </style>
@@ -504,28 +505,28 @@
   </head>
 <body>
 
-<nav style="z-index: 1000;" id="nav_pc">
-  <div class="logo"><img src="img/logo_LOGO.svg" style="width:;display:;margin:0px 0;cursor: pointer;" onclick="location.href='Tcloud_1103_4.html'"></div>
-
-   <ul style="position: absolute;top:0px;right:40px;">
-    <input type="button" class="menu" value="聯絡我們" onClick="javascript:ScrollTo('contact')">
-    <input type="button" class="menu" value="相關活動" onClick="javascript:ScrollTo('news')">
-    <input type="button" class="menu" value="銷售方案" onClick="javascript:ScrollTo('product')">　
-    <input type="button" class="menu" value="計畫內容" onClick="javascript:ScrollTo('plan')">　
-  </ul>
-</nav>
-
-<nav style="z-index: 1000;" id="nav_mobile">
-  <div  class="logo_mobile" style="cursor: pointer;" onclick="location.href='Tcloud_1103_4.html'"><img src="img/logo_LOGO.svg"></div>
-  <label for="menu-check" id="menu-toggle"><img src="img/icon_menu.svg" style="padding:;"></label>     
-  <input id="menu-check" type="checkbox">     
-  <ul class="checkmenu">         
-    <li onClick="javascript:ScrollTo('plan')">計畫內容</li>         
-    <li onClick="javascript:ScrollTo('product')">銷售方案</li>         
-    <li onClick="javascript:ScrollTo('news_mobile')">相關活動</li>         
-    <li onClick="javascript:ScrollTo('contact')">聯絡我們</li>         
-  </ul>
-</nav>
+  <nav style="z-index: 1000;" id="nav_pc">
+    <div class="logo"><img src="img/logo_LOGO.svg" style="width:;display:;margin:0px 0;cursor: pointer;" onclick="location.href='index.html'"></div>
+     <ul style="position: absolute;top:10px;right:40px;">
+      <a href="#plan" class="menu" active>計畫內容</a>
+      <a href="#product" class="menu">產品方案</a>
+      <a href="#news_pc" class="menu">相關活動</a>
+      <a href="#contact" class="menu">聯絡我們</a>
+     </ul>
+  </nav>
+  
+  <nav style="z-index: 1000;" id="nav_mobile">
+    <div  class="logo_mobile" style="cursor: pointer;" onclick="location.href='index.html'"><img src="img/logo_LOGO.svg"></div>
+    <label for="menu-check" id="menu-toggle"><img src="img/icon_menu.svg"></label>     
+    <input id="menu-check" type="checkbox">     
+    <ul class="checkmenu">         
+      <li><a href="#plan">計畫內容</a></li>         
+      <li><a href="#product">產品方案</a></li>         
+      <li><a href="#news_mobile">相關活動</a></li>         
+      <li><a href="#contact">聯絡我們</a></li>         
+    </ul>
+  </nav>
+  
 
 
 
@@ -843,7 +844,7 @@
 
 </div>
 
-<div id="news" class="news_pc" style="margin:100px auto;width:80%;text-align: center;height:auto;">
+<div id="news_pc" class="news_pc" style="margin:100px auto;width:80%;text-align: center;height:auto;">
 
   <div><h1><b>相關活動</b></h1></div>
   <h3 style="color:#000000;padding-bottom:5vh;">政府補助中小企業數位轉型，還只看到採購金額？憂心投入的資金石沈大海，遲遲等不到應有的成效？下半年預計陸續舉辦數位轉型相關議題講座，歡迎蒞臨切磋指教！</h3>
